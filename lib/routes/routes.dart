@@ -1,10 +1,10 @@
 import 'package:admin_you_need/routes/one_route.dart';
 import 'package:admin_you_need/screens/business/business_screen.dart';
-import 'package:admin_you_need/screens/category/category_screen.dart';
 import 'package:admin_you_need/screens/boostages/boost_screen.dart';
 import 'package:admin_you_need/screens/notification/notification_screen.dart';
 
 import 'package:admin_you_need/screens/clients/user_screen.dart';
+import 'package:admin_you_need/screens/service/category_screen.dart';
 import 'package:admin_you_need/screens/wallet/wallet.dart';
 import 'package:flutter/material.dart';
 

@@ -63,9 +63,9 @@ class DashHomeState extends State<DashHome> {
             totalProduct != 0 ? (limitedStockProduct / totalProduct) * 100 : 0,
       ),
       ProductSummeryInfo(
-        title: "Validations",
+        title: "Boostages",
         productsCount: otherStockProduct,
-        subtitle: 'validation',
+        subtitle: 'boostage(s)',
         svgSrc: "assets/icons/Product4.svg",
         color: const Color(0xFF47e228),
         percentage:

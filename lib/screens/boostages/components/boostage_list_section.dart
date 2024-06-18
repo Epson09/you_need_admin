@@ -30,7 +30,7 @@ class _BoostageListSectionState extends State<BoostageListSection> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            "Les Validations",
+            "Les Boostages",
             style: TextStyle(color: kBlack, fontWeight: FontWeight.w700)
           ),
 

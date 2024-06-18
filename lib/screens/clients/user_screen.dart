@@ -2,7 +2,6 @@ import 'package:admin_you_need/common/constants.dart';
 import 'package:admin_you_need/common/size.dart';
 import 'package:admin_you_need/data/models/user/user.dart';
 import 'package:admin_you_need/screens/boostages/components/coupon_code_header.dart';
-import 'package:admin_you_need/utility/constants.dart';
 import 'package:admin_you_need/widgets/fields/textfield.dart';
 import 'package:admin_you_need/widgets/remote_image.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +31,7 @@ class _UserScreenState extends State<UserScreen> {
     selectedDate = userDateTime.first;
     return SafeArea(
       child: Scaffold(
+        backgroundColor: kBackgroundColor,
         appBar: AppBar(
           backgroundColor: kBackgroundColor,
           leading: InkWell(
@@ -80,27 +80,9 @@ class _UserScreenState extends State<UserScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Text(
-                      "Mes Utilisateurs",
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                  ),
-                  IconButton(
-                      onPressed: () {
-                        //TODO: should complete call getAllVariant
-                      },
-                      icon: const Icon(Icons.refresh)),
-                ],
-              ),
-
+     
               //  const Expanded(child: UserListSection()),
-              SizedBox(
-                height: SizeConfig.screenHeight * 0.03,
-              ),
+             
               Expanded(
                   flex: 0,
                   child: Row(
@@ -118,6 +100,8 @@ class _UserScreenState extends State<UserScreen> {
                         child: DropdownButtonFormField<DateTime>(
                           alignment: Alignment.center,
                           isExpanded: true,
+                          iconEnabledColor: kBlack,
+                          iconDisabledColor: kBlack,
                           decoration: CustomTextField.myDecoration2(
                               hintText: "Choisir"),
                           value: selectedDate,
@@ -126,7 +110,7 @@ class _UserScreenState extends State<UserScreen> {
                               value: date,
                               alignment: Alignment.center,
                               child: Text(
-                                  '${date.day}/${date.month}/${date.year}'),
+                                  '${date.day}/${date.month}/${date.year}', style: TextStyle(color: kBlack),),
                             );
                           }).toList(),
                           onChanged: (DateTime? newValue) {
@@ -159,6 +143,27 @@ class _UserScreenState extends State<UserScreen> {
               SizedBox(
                 height: SizeConfig.screenHeight * 0.03,
               ),
+                       Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Expanded(
+                    child: Text(
+                      "Mes Utilisateurs",
+                      style: TextStyle(color: kBlack, fontWeight: FontWeight.w700, fontSize: 16)
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {
+                        //TODO: should complete call getAllVariant
+                      },
+                      icon: const Icon(Icons.refresh)),
+                ],
+              ),
+
+             
+              SizedBox(
+                height: SizeConfig.screenHeight * 0.03,
+              ),
               Expanded(
                   flex: 5,
                   child: ListView.builder(
@@ -170,7 +175,7 @@ class _UserScreenState extends State<UserScreen> {
                         margin: const EdgeInsets.symmetric(vertical: 10),
                         decoration: const BoxDecoration(
                           boxShadow: [
-                            BoxShadow(
+                          /*   BoxShadow(
                               color: secondaryColor,
                               offset: Offset(-2.8, -5.8),
                               blurRadius: 2,
@@ -181,7 +186,7 @@ class _UserScreenState extends State<UserScreen> {
                               offset: Offset(1.8, 2.8),
                               blurRadius: 4,
                               spreadRadius: 0.0,
-                            ),
+                            ), */
                           ],
                         ),
                         child: Row(
@@ -199,10 +204,10 @@ class _UserScreenState extends State<UserScreen> {
                                 SizedBox(
                                   width: SizeConfig.screenWidth * 0.05,
                                 ),
-                                Text("${user.firstname} ${user.lastname}"),
+                                Text("${user.firstname} ${user.lastname}", style: TextStyle(color: kBlack),),
                               ],
                             ),
-                            const Icon(Icons.keyboard_arrow_right),
+                            const Icon(Icons.keyboard_arrow_right, color: kBlack,),
                           ],
                         ),
                       );

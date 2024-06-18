@@ -60,6 +60,7 @@ class ProfileCard extends StatelessWidget {
                       const Expanded(
                           child: Text(
                         "Angelina Jolie",
+                        style: TextStyle(color: kBlack),
                         overflow: TextOverflow.ellipsis,
                       )),
                     ],
@@ -126,10 +127,10 @@ class SearchField extends StatelessWidget {
             padding: const EdgeInsets.all(defaultPadding * 0.75),
             margin: const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
             decoration: const BoxDecoration(
-              color: kBlue2,
+              color: kYellow,
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
-            child: SvgPicture.asset("assets/icons/Search.svg"),
+            child: SvgPicture.asset("assets/icons/Search.svg",color: kBlack,),
           ),
         ),
       ),

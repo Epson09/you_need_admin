@@ -10,13 +10,13 @@ class ProductImageCard extends StatelessWidget {
   final VoidCallback? onRemoveImage;
 
   const ProductImageCard({
-    Key? key,
+    super.key,
     required this.labelText,
     this.imageFile,
     required this.onTap,
     this.imageUrlForUpdateImage,
     this.onRemoveImage,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -6,10 +6,10 @@ import '../../../utility/constants.dart';
 import '../../../widgets/category_image_card.dart';
 import '../../../widgets/custom_text_field.dart';
 
-class CategorySubmitForm extends StatelessWidget {
+class AddCategoryForm extends StatelessWidget {
   final Category? category;
 
-  const CategorySubmitForm({super.key, this.category});
+  const AddCategoryForm({super.key, this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +28,8 @@ class CategorySubmitForm extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+
+              
               const Gap(defaultPadding),
                CategoryImageCard(
                     labelText: "Category",
@@ -97,7 +99,7 @@ void showAddCategoryForm(BuildContext context, Category? category) {
       return AlertDialog(
         backgroundColor: bgColor,
         title: Center(child: Text('Add Category'.toUpperCase(), style: const TextStyle(color: primaryColor))),
-        content: CategorySubmitForm(category: category),
+        content: AddCategoryForm(category: category),
       );
     },
   );

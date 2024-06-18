@@ -14,91 +14,47 @@ class BusinessListSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return Container(
-      padding: const EdgeInsets.all(defaultPadding),
-      decoration: const BoxDecoration(
-        color: secondaryColor,
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Tous les Businesses",
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-
-           Expanded(
-            child: ListView.builder(
-              itemCount: demoBusiness.length,
-              itemBuilder: (context, index) {
-                final business = demoBusiness[index];
-                final category = demoBusicat.firstWhere((cat) => cat.id == business.categoryId);
-                return ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: colors[index % colors.length],
-                    child: Text((index + 1).toString()),
+    return 
+    
+    Expanded(
+      child: Container(
+        padding: const EdgeInsets.all(defaultPadding),
+        decoration: const BoxDecoration(
+          color: secondaryColor,
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+        ),
+        child: ListView.builder(
+          itemCount: demoBusiness.length,
+          itemBuilder: (context, index) {
+            final business = demoBusiness[index];
+            final category = demoBusicat.firstWhere((cat) => cat.id == business.categoryId);
+            return ListTile(
+              leading: CircleAvatar(
+                backgroundColor: colors[index % colors.length],
+                child: Text((index + 1).toString()),
+              ),
+              title: Text(business.name),
+              subtitle: Text(category.name),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      showBrandForm(context, business);
+                    },
+                    icon: const Icon(Icons.edit),
                   ),
-                  title: Text(business.name),
-                  subtitle: Text(category.name),
-                  trailing: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          showBrandForm(context, business);
-                        },
-                        icon: const Icon(Icons.edit),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          // TODO: should complete deleteBrand
-                        },
-                        icon: const Icon(Icons.delete, color: Colors.red),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
-        /*   SizedBox(
-              width: double.infinity,
-              child: DataTable(
-                columnSpacing: defaultPadding,
-                // minWidth: 600,
-                columns: const [
-                  DataColumn(
-                    label: Text("Brands Name"),
-                  ),
-                  DataColumn(
-                    label: Text("Sub Category"),
-                  ),
-                  DataColumn(
-                    label: Text("Added Date"),
-                  ),
-                  DataColumn(
-                    label: Text("Edit"),
-                  ),
-                  DataColumn(
-                    label: Text("Delete"),
+                  IconButton(
+                    onPressed: () {
+                      // TODO: should complete deleteBrand
+                    },
+                    icon: const Icon(Icons.delete, color: Colors.red),
                   ),
                 ],
-                rows: List.generate(demoBusiness.length, (index) {
-                  demoBusicat.forEach((cat) {
-                    if (cat.id == demoBusiness[index].categoryId) {
-                      busiCat = cat;
-                    }
-                  });
-                  return brandDataRow(demoBusiness[index], busiCat!, index + 1,
-                      edit: () {
-                    showBrandForm(context, demoBusiness[index]);
-                  }, delete: () {
-                    //TODO: should complete deleteBrand
-                  });
-                }),
-              )),
-        */ ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }

@@ -227,7 +227,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                         },
                       ),
                       ProfileMenu(
-                        text: "Validations",
+                        text: "Boostages",
                         icon: "assets/icons/lamp-slash.png",
                         press: () {
                           Navigator.pushNamed(context, "/Coupon");

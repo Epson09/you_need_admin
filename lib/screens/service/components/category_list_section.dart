@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import '../../../utility/constants.dart';
 import '../../../data/models/category.dart';
-import 'add_category_form.dart';
+import 'add_service_form.dart';
 
 class CategoryListSection extends StatelessWidget {
   const CategoryListSection({
