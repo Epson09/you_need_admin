@@ -15,13 +15,13 @@ class BrandScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: kBackgroundColor,
         appBar: AppBar(
-          backgroundColor: kBackgroundColor,
+          backgroundColor: kYellow,
           leading: InkWell(
             onTap: () => Navigator.of(context).pop(),
             child: Container(
               padding: const EdgeInsets.only(
                 top: 9,
-                left: 12,
+                left: 12, 
                 right: 0,
                 bottom: 10,
               ),
@@ -29,10 +29,10 @@ class BrandScreen extends StatelessWidget {
                 alignment: Alignment.center,
 
                 decoration: BoxDecoration(
-                  color: kBackgroundColor,
+                  color: kYellow,
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(
-                    color: kBackgroundColor,
+                    color: kYellow,
                     width: 5,
                   ),
                   boxShadow: [

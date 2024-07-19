@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 
 //const kPrimaryColor = Color.fromARGB(255, 17, 97, 48);
-
+ const String fontsFamily = "SF Pro Display";
 const Color kWhite = Color(0xFFFFFFFF);
 const Color kBlack = Color(0xFF2D3243);
 const Color kYellow = Color(0xFFDDED6B);
+Color buttonColor = "#EB7171".toColor();
+Color bgColor = "#FFCFCF".toColor();
+Color borderColor = "#DFDFDF".toColor();
+Color hintColor = "#7E7E7E".toColor();
+Color fieldBg = "#F4F4F4".toColor();
+Color bgWhite = "#FDFDFD".toColor();
+Color lightBorder = "#F1F1F1".toColor();
+Color textHintColor = "#A5A4AA".toColor();
+
 
 const Color kRed = Color(0xFFe74700);
 const Color kBlue = Color(0xFF2596BE);

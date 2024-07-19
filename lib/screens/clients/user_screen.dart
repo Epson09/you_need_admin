@@ -33,7 +33,7 @@ class _UserScreenState extends State<UserScreen> {
       child: Scaffold(
         backgroundColor: kBackgroundColor,
         appBar: AppBar(
-          backgroundColor: kBackgroundColor,
+          backgroundColor: kYellow,
           leading: InkWell(
             onTap: () => Navigator.of(context).pop(),
             child: Container(
@@ -47,10 +47,10 @@ class _UserScreenState extends State<UserScreen> {
                 alignment: Alignment.center,
 
                 decoration: BoxDecoration(
-                  color: kBackgroundColor,
+                  color: kYellow,
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(
-                    color: kBackgroundColor,
+                    color: kYellow,
                     width: 5,
                   ),
                   boxShadow: [

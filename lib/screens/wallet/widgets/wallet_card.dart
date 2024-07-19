@@ -33,7 +33,7 @@ class _WalletDashboardCardState extends State<WalletDashboardCard> {
             elevation: 5.0,
             shadowColor: Colors.grey.withOpacity(0.3),
             child: Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               width: widget.width,
               height: widget.height,
               decoration: BoxDecoration(
@@ -43,12 +43,12 @@ class _WalletDashboardCardState extends State<WalletDashboardCard> {
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.3),
                     blurRadius: 10,
-                    offset: Offset(4, 4),
+                    offset: const Offset(4, 4),
                   ),
                   BoxShadow(
                     color: Colors.white.withOpacity(0.7),
                     blurRadius: 10,
-                    offset: Offset(-4, -4),
+                    offset: const Offset(-4, -4),
                   ),
                 ],
               ),
@@ -57,7 +57,7 @@ class _WalletDashboardCardState extends State<WalletDashboardCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
                       color: widget.background,
                       borderRadius: BorderRadius.circular(16.0),
@@ -65,19 +65,19 @@ class _WalletDashboardCardState extends State<WalletDashboardCard> {
                         BoxShadow(
                           color: Colors.grey.withOpacity(0.3),
                           blurRadius: 5,
-                          offset: Offset(2, 2),
+                          offset: const Offset(2, 2),
                         ),
                         BoxShadow(
                           color: Colors.white.withOpacity(0.7),
                           blurRadius: 5,
-                          offset: Offset(-2, -2),
+                          offset: const Offset(-2, -2),
                         ),
                       ],
                     ),
                     child: Center(
                       child: Text(
                         widget.textData,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
@@ -85,9 +85,9 @@ class _WalletDashboardCardState extends State<WalletDashboardCard> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   widget.child,
-                  SizedBox(height: 8.0),
+                  const SizedBox(height: 8.0),
                 ],
               ),
             ),
@@ -98,7 +98,7 @@ class _WalletDashboardCardState extends State<WalletDashboardCard> {
             elevation: 5.0,
             shadowColor: Colors.grey.withOpacity(0.3),
             child: Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               width: widget.width,
               height: widget.height,
               decoration: BoxDecoration(
@@ -108,16 +108,16 @@ class _WalletDashboardCardState extends State<WalletDashboardCard> {
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.3),
                     blurRadius: 10,
-                    offset: Offset(4, 4),
+                    offset: const Offset(4, 4),
                   ),
                   BoxShadow(
                     color: Colors.white.withOpacity(0.7),
                     blurRadius: 10,
-                    offset: Offset(-4, -4),
+                    offset: const Offset(-4, -4),
                   ),
                 ],
               ),
-              child: Center(
+              child: const Center(
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
                 ),

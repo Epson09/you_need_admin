@@ -17,7 +17,7 @@ class WalletScreenState extends State<WalletScreen> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
         statusBarColor: kYellow,
-        systemNavigationBarColor: Colors.white,
+        systemNavigationBarColor: kYellow,
         statusBarIconBrightness: Brightness.light,
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
@@ -47,10 +47,10 @@ class WalletScreenState extends State<WalletScreen> {
                 alignment: Alignment.center,
                
                 decoration: BoxDecoration(
-            color: kBackgroundColor,
+            color: kYellow,
             borderRadius: BorderRadius.circular(5),
             border: Border.all(
-              color: kBackgroundColor,
+              color: kYellow,
               width: 5,
             ),
             boxShadow: [
@@ -81,7 +81,7 @@ class WalletScreenState extends State<WalletScreen> {
           systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: kYellow,
           ),
-          backgroundColor: kWhite,
+          backgroundColor: kYellow,
           centerTitle: true,
           elevation: 1.0,
         ),

@@ -22,7 +22,7 @@ class _BoostagesScreenState extends State<BoostagesScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: kBackgroundColor,
+          backgroundColor: kYellow,
           leading: InkWell(
             onTap: () => Navigator.of(context).pop(),
             child: Container(
@@ -36,10 +36,10 @@ class _BoostagesScreenState extends State<BoostagesScreen> {
                 alignment: Alignment.center,
 
                 decoration: BoxDecoration(
-                  color: kBackgroundColor,
+                  color: kYellow,
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(
-                    color: kBackgroundColor,
+                    color: kYellow,
                     width: 5,
                   ),
                   boxShadow: [

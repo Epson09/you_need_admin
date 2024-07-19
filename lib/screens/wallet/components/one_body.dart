@@ -5,9 +5,7 @@ import 'package:admin_you_need/screens/wallet/widgets/see_more_section.dart';
 import 'package:admin_you_need/screens/wallet/widgets/tansact_card.dart';
 import 'package:admin_you_need/screens/wallet/widgets/wallet_card.dart';
 import 'package:admin_you_need/utility/formatter.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -37,122 +35,22 @@ class _WalletBodyState extends State<WalletBody> {
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  WalletDashboardCard(
-                    isLoading: false,
-                    background: kBlue2,
-                    width: 67.w,
-                    height: 19.h,
-                    textData: "Solde",
-                    child: Center(
-                      child: Text(
-                        "${NumberFormat.decimalPattern('fr').format(520000)} F CFA",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 18.sp,
-                          color: kWhite,
-                        ),
-                      ),
+              child: WalletDashboardCard(
+                isLoading: false,
+                background: kBlue2,
+                width: SizeConfig.screenWidth,
+                height: 19.h,
+                textData: "Solde",
+                child: Center(
+                  child: Text(
+                    "${NumberFormat.decimalPattern('fr').format(520000)} F CFA",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w300,
+                      fontSize: 18.sp,
+                      color: kWhite,
                     ),
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: kYellow,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
-                              offset: const Offset(2, 2),
-                              blurRadius: 2,
-                            ),
-                            BoxShadow(
-                              color: Colors.white.withOpacity(0.7),
-                              offset: const Offset(-2, -2),
-                              blurRadius: 2,
-                            ),
-                          ],
-                        ),
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: kBlue2,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            shadowColor:
-                                Colors.transparent, // No default shadow
-                            padding: EdgeInsets.zero, // Remove default padding
-                          ),
-                          child: SizedBox(
-                            width: 18.w,
-                            height: 40,
-                            child: const Center(
-                              child: Text(
-                                "Dépôts",
-                                style: TextStyle(
-                                  color: kWhite,
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 2.h,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: kYellow,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
-                              offset: const Offset(2, 2),
-                              blurRadius: 2,
-                            ),
-                            BoxShadow(
-                              color: Colors.white.withOpacity(0.7),
-                              offset: const Offset(-2, -2),
-                              blurRadius: 2,
-                            ),
-                          ],
-                        ),
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: kYellow,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            shadowColor:
-                                Colors.transparent, 
-                            padding: EdgeInsets.zero,
-                          ),
-                          child: SizedBox(
-                            width: 18.w,
-                            height: 40,
-                            child: const Center(
-                              child: Text(
-                                "Retraits",
-                                style: TextStyle(
-                                  color: kBlack,
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  )
-                ],
+                ),
               ),
             ),
             GestureDetector(
